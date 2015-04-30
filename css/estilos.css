@@ -771,3 +771,5 @@ body {
 	top:20px;
 	cursor:pointer
 }
+
+#mas{position:absolute; width:100px; height:100px; background:url(../imagenes/mas.png); right:40px; top:-140px;}

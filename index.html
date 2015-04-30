@@ -860,7 +860,7 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen1" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -885,6 +885,26 @@
     </div>
   </div>
 </div>
+
+<script>
+  var title = 'Welcoming remarks';
+  var loc = 'Conference Room JW Marriott';
+  var notes = '';
+  var startDate = new Date(2015, 4, 20, 2, 0, 0, 0);
+  var endDate = new Date(2015, 4, 20, 3, 0, 0, 0);
+  var calendarName = "WFC2015";
+  
+  $('#calen1').click(function(){
+	  title = 'Welcoming remarks';
+  	  loc = 'Conference Room JW Marriott';
+      notes = '';
+      startDate = new Date(2015, 4, 20, 2, 0, 0, 0);
+      endDate = new Date(2015, 4, 20, 3, 0, 0, 0);
+  	  calendarName = "WFC2015";
+  	  createCalendarEvent()
+  })
+  
+</script>
 
 <!----------------TEMA 2----------->
 
@@ -915,7 +935,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen2" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen2').click(function(){
+				  title = 'Keynote address';
+				  loc = 'Conference Room JW Marriott';
+				  notes = '';
+				  startDate = new Date(2015, 4, 20, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 20, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script> 
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -972,7 +1003,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen3" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen3').click(function(){
+				  title = 'Session 1';
+				  loc = 'Conference Room JW Marriott';
+				  notes = '';
+				  startDate = new Date(2015, 4, 20, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 20, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script> 
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -1028,7 +1070,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen4" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen4').click(function(){
+				  title = 'Session 2';
+				  loc = 'Conference Room JW Marriott';
+				  notes = '';
+				  startDate = new Date(2015, 4, 20, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 20, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script>  
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -1081,7 +1134,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen5" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen5').click(function(){
+				  title = 'Session 1';
+				  loc = 'Keynote address';
+				  notes = '';
+				  startDate = new Date(2015, 4, 21, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 21, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script>  
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -1138,7 +1202,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen6" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen6').click(function(){
+				  title = 'Session 3';
+				  loc = 'Conference Room JW Marriott';
+				  notes = '';
+				  startDate = new Date(2015, 4, 21, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 21, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script>   
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -1196,7 +1271,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen7" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen7').click(function(){
+				  title = 'Session 4';
+				  loc = 'Conference Room JW Marriott';
+				  notes = '';
+				  startDate = new Date(2015, 4, 21, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 21, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script> 
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -1252,7 +1338,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen8" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen8').click(function(){
+				  title = 'Session 5';
+				  loc = 'Conference Room JW Marriott';
+				  notes = '';
+				  startDate = new Date(2015, 4, 21, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 21, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script> 
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -1309,7 +1406,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen9" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen9').click(function(){
+				  title = 'Session 6';
+				  loc = 'Conference Room JW Marriott';
+				  notes = '';
+				  startDate = new Date(2015, 4, 21, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 21, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script> 
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -1366,7 +1474,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen10" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen10').click(function(){
+				  title = 'Session 7';
+				  loc = 'Conference Room JW Marriott';
+				  notes = '';
+				  startDate = new Date(2015, 4, 22, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 22, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script> 
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -1425,7 +1544,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen11" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen11').click(function(){
+				  title = 'Session 8';
+				  loc = 'Conference Room JW Marriott';
+				  notes = '';
+				  startDate = new Date(2015, 4, 22, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 22, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script>
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -1483,7 +1613,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen12" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen12').click(function(){
+				  title = 'Session 9';
+				  loc = 'Conference Room JW Marriott';
+				  notes = '';
+				  startDate = new Date(2015, 4, 22, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 22, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script> 
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -1540,7 +1681,18 @@
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
         <div class="horario_todo"> 
         <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
-        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        <img id="calen13" src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/>
+        <script>
+        	 $('#calen13').click(function(){
+				  title = 'Final Session';
+				  loc = 'Conference Room JW Marriott';
+				  notes = '';
+				  startDate = new Date(2015, 4, 22, 2, 0, 0, 0);
+				  endDate = new Date(2015, 4, 22, 3, 0, 0, 0);
+				  calendarName = "WFC2015";
+				  createCalendarEvent()
+			  })
+        </script> 
         </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
@@ -2602,7 +2754,7 @@
       </div>
       
       <div class="horario_conferencia" style="background-color:#ebfbfc; margin-top:-10px;">
-      	<div id="mas" style="position:absolute; width:100px; height:100px; background:url(imagenes/mas.png); right:40px; top:-140px;"></div>
+      	<div id="mas"></div>
         <div class="horario_todo" style="width:60%;"> <b style="font-size:28px; color:#003366; font-family:helveticaBold">Conference Room JW Marriott</b>
         </div>
         <script>
@@ -2653,7 +2805,7 @@
           In this section you could find your QR code that was assigned to you. </div>
       </div>
       <div class="horario_conferencia" style="background-color:#f2fafb">
-        <a onclick="scanear();" href="#scan"><div  id="bt_scan" class="horario_todo" style="width:60%; background:url(imagenes/flechita2.png) no-repeat; background-position:100%; padding-top:80px; padding-bottom:80px;"> <b style="font-size:28px; color:#003366; font-family:helveticaBold;">Scan Qr Codes</b><br>
+        <a onclick="scanear();" href="#scan" style="text-decoration:none;"><div  id="bt_scan" class="horario_todo" style="width:60%; background:url(imagenes/flechita2.png) no-repeat; background-position:100%; padding-top:80px; padding-bottom:80px;"> <b style="font-size:28px; color:#003366; font-family:helveticaBold;">Scan Qr Codes</b><br>
           In this section you can scan other codes. </div></a>
       </div>
     </div>
@@ -2684,7 +2836,7 @@
         <div class="texto_neo fecha_horarios1f">My QR code</div>
         <img class="atr_qr" src="imagenes/atras.png" height="30%" style="position:absolute; left:30%; top:35%"/> </div>
       <div class="myqr">
-        <iframe id="if_qr2" style="position:absolute; width:314px; height:314px; border:none; background-color:#fff; top:50%; left:50%; margin-left:-37px; margin-top:-140px;" scrolling="no" frameborder="0"></iframe>
+        <iframe id="if_qr2" style="position:absolute; width:314px; height:314px; border:none; background-color:#fff; top:50%; left:50%; margin-left:-100px; margin-top:-140px;" scrolling="no" frameborder="0"></iframe>
       </div>
     </div>
     <div class="menu" style="max-width:140px;">
@@ -2754,19 +2906,18 @@
           <div style="position:absolute; max-width:250px; margin-left:20px; top:60px; text-align:center; font-size:50px; width:60%; color:#333"> 
           
           <img id="com_correo" src="imagenes/correo.png" width="55" height="55" style="position:absolute; left:0px;"/> 
-          <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wfc-2015.net/" target="popup" onClick="window.open(this.href, this.target, 'width=400,height=400'); return false;"><img id="com_lin" src="imagenes/linkedin.png" width="55" height="55" style="position:absolute; left:50%; margin-left:-27px;"/></a> 
-          
-          <a href="http://twitter.com/share?url=http://www.wfc-2015.net/&text=Welcoming remarks&hashtags=wfc2015" target="popup" onClick="window.open(this.href, this.target, 'width=400,height=400'); return false;"><img id="com_twi" src="imagenes/twitter.png" width="55" height="55" style="position:absolute; right:0px;"/></a> </div>
+          <img id="com_lin" src="imagenes/linkedin.png" width="55" height="55" style="position:absolute; left:50%; margin-left:-27px;"/> 
+          <img id="com_twi" src="imagenes/twitter.png" width="55" height="55" style="position:absolute; right:0px;"/> </div>
           
           <script>
           	$('#com_correo').click(function(){
- 				window.open("mailto:?Subject=Welcoming remarks&Body=http://www.wfc-2015.net/", "popup1"); 
+ 				window.open("mailto:?Subject=WFC2015 My experience&Body="+dirFoto, "popup1"); 
  			})
 			$('#com_lin').click(function(){
- 				window.open("http://www.linkedin.com/shareArticle?mini=true&url=http://www.wfc-2015.net/", "popup1"); 
+ 				window.open("http://www.linkedin.com/shareArticle?mini=true&url="+dirFoto, "popup2"); 
  			})
 			$('#com_twi').click(function(){
- 				window.open("http://twitter.com/share?url=http://www.wfc-2015.net/&text=Welcoming remarks&hashtags=wfc2015", "popup1"); 
+ 				window.open("http://twitter.com/share?url="+dirFoto+"&text=WFC2015 My experience&hashtags=wfc2015", "popup3"); 
  			})
           </script>
         </div>
@@ -9305,10 +9456,8 @@
 
 		
 
-		
+	var dirFoto	
 
-		
-	var direFoto;
 	var pictureSource;   // picture source
 
     var destinationType; // sets the format of returned value
@@ -9316,26 +9465,19 @@
     document.addEventListener("deviceready",onDeviceReady,false);
 
     function onDeviceReady() {
-
         pictureSource=navigator.camera.PictureSourceType;
-
         destinationType=navigator.camera.DestinationType;
-
     }
 
     function onPhotoDataSuccess(imageData) {
-
       var smallImage = document.getElementById('smallImage');
-
       smallImage.style.display = 'block';
-
 	  $('#com_foto').fadeIn()
-
       smallImage.src = "data:image/jpeg;base64," + imageData;
-
-	  direFoto = "data:image/jpeg;base64," + imageData;
-	  alert(direFoto)
+	  dirFoto="data:image/jpeg;base64," + imageData;
+	  $('#com_foto').html(dirFoto)
     }
+	
 
     function onPhotoURISuccess(imageURI) {
 
@@ -9349,9 +9491,11 @@
 
     function capturePhoto() {
 
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-
-        destinationType: destinationType.DATA_URL });
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { 
+	  quality: 50,
+	  destinationType: destinationType.DATA_URL,
+	  saveToPhotoAlbum: true 
+	  });
 
     }
 
@@ -9360,6 +9504,18 @@
       //alert('Failed because: ' + message);
 
     }
+	
+	
+	function createCalendarEvent() {
+		window.plugins.calendar.createEvent(title, loc, notes, startDate, endDate, onSuccess, onError);
+	 }
+	 function onSuccess(msg) {
+    	alert('Event added: '+title);
+     }
+
+	  function onError(msg) {
+		alert('Calendar error: ' + JSON.stringify(msg));
+	  }
 
 		
 
