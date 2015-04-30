@@ -51,6 +51,11 @@
   <img id="logo" src="imagenes/logo.png"/> <img id="cargar" src="imagenes/cargar.png"/>
   <div id="naranja"></div>
   <div id="cargando" class="texto_carbon">CARGANDO</div>
+  <div id="nom3" class="texto_carbon" style="opacity:0.1">holas</div>
+  
+  <script>
+  	$('#nom3').html(localStorage.getItem("nombre"))
+  </script>
 </div>
 
 <!--///////////LOGIN///////////-->
@@ -113,29 +118,18 @@
                 	if(data=="no pasa"){
 
 						$('#resp').fadeIn()
-
 						$('#resp').html('*Forgot your password? Press here.');
-
 						$('.email_error').css('visibility','visible')
-
 						document.getElementById('email').value=''
-
 						$('.pass_error').css('visibility','visible')
-
 						document.getElementById('pass').value=''
-
 					}else{
-
 						$('#resp').fadeOut()
-
 						  window.location.href = '#home'
-
 						  $('#login').fadeOut(400)
-
 						  $('#home').fadeIn(400)
-
 						  ini_hom()
-
+						  allText = data;
 					}
 
 					
@@ -389,6 +383,10 @@
             success: function(data) {
 
 				
+					localStorage.setItem("nombre", document.getElementById("f_nombre").value);
+					localStorage.setItem("apellido", document.getElementById("f_apellido").value);
+					localStorage.setItem("email", document.getElementById("f_email").value);
+					localStorage.setItem("telefono", document.getElementById("f_telefono").value);
 
 					window.location.href = '#exito'
 
@@ -399,23 +397,12 @@
 					ini_exi()
 
 				
-
-					document.getElementById('escribirtxt').src = "escribe.php?datos="+document.getElementById("f_nombre").value+" "+document.getElementById("f_apellido").value+", "+document.getElementById("f_email").value+", "+document.getElementById("f_telefono").value
-
+					document.getElementById('if_qr').src = "http://marlonruo.com/wfc2015/qr.php?datos=<b>"+document.getElementById("f_nombre").value+" "+document.getElementById("f_apellido").value+"</b><br> Phone: <a href='tel:"+document.getElementById("f_telefono").value+"'>"+document.getElementById("f_telefono").value+"</a><br> Mail: <a href='mailto:"+document.getElementById("f_email").value+"'>"+document.getElementById("f_email").value+"</a>"
 					
 
-					document.getElementById('if_qr').src = "http://marlonruo.com/wfc2015/qr.php?datos="+document.getElementById("f_nombre").value+" "+document.getElementById("f_apellido").value+", "+document.getElementById("f_email").value+", "+document.getElementById("f_telefono").value
-					
-					
-					allText = document.getElementById("f_nombre").value+" "+document.getElementById("f_apellido").value+", "+document.getElementById("f_email").value+", "+document.getElementById("f_telefono").value
 
+					allText = "<b>"+document.getElementById("f_nombre").value+" "+document.getElementById("f_apellido").value+"</b><br> Phone: <a href='tel:"+document.getElementById("f_telefono").value+"'>"+document.getElementById("f_telefono").value+"</a><br> Mail: <a href='mailto:"+document.getElementById("f_email").value+"'>"+document.getElementById("f_email").value+"</a>"
                 	
-
-				  
-
-					
-
-					
 
 					//$('#respuesta').html(data);
 
@@ -871,7 +858,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -923,7 +913,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -977,7 +970,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -1030,7 +1026,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -1080,7 +1079,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -1134,7 +1136,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -1189,7 +1194,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -1242,7 +1250,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -1296,7 +1307,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -1350,7 +1364,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -1406,7 +1423,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -1461,7 +1481,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -1515,7 +1538,10 @@
           <b>Room:</b> <span id="te_sala">Conference Room JW Marriott</span> </div>
       </div>
       <div class="horario_conferencia" style="background-color:#ebfbfc; height:210px;">
-        <div class="horario_todo"> <a href="map.html" target="_parent"><img src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/></a> <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> </div>
+        <div class="horario_todo"> 
+        <img class="ir_map" src="imagenes/ver_mapa.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:70px;"/>
+        <img src="imagenes/agregar_calendario.png" width="60%" style="position:absolute; max-width:250px; margin-left:20px; top:125px;"/> 
+        </div>
       </div>
       <div class="horario_conferencia" style="height:190px;">
         <div class="horario_todo">
@@ -2572,12 +2598,29 @@
         <div class="texto_carbon titulo_horarios1d">MAP</div>
       </div>
       <div class="horario_conferencia" style="overflow:scroll">
-        <div class="horario_todo" style="padding:0px; padding-left:210px; text-align:center"> <img src="imagenes/mapa.png" width="2500px"/> </div>
+        <div class="horario_todo" style="padding:0px; padding-left:210px; text-align:center"> <img id="im_mapa" src="imagenes/mapa.png" width="2274px"/> </div>
       </div>
+      
       <div class="horario_conferencia" style="background-color:#ebfbfc; margin-top:-10px;">
-        <div class="horario_todo" style="width:60%;"> <b style="font-size:28px; color:#003366; font-family:helveticaBold">Conference Room JW Marriott</b><br>
-          <br>
-          Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC. </div>
+      	<div id="mas" style="position:absolute; width:100px; height:100px; background:url(imagenes/mas.png); right:40px; top:-140px;"></div>
+        <div class="horario_todo" style="width:60%;"> <b style="font-size:28px; color:#003366; font-family:helveticaBold">Conference Room JW Marriott</b>
+        </div>
+        <script>
+		var mmm=0
+        	$('#mas').click(function(){
+				if(mmm==0){
+				$(this).css('background','url(imagenes/menos.png)')
+				$('#im_mapa').css('width','3032px')
+				$('#im_mapa').css('height','1248px')
+				mmm=1
+				}else{
+				$(this).css('background','url(imagenes/mas.png)')
+				$('#im_mapa').css('width','2274px')
+				$('#im_mapa').css('height','936px')
+				mmm=0
+				}
+			})
+        </script>
       </div>
     </div>
     <div class="menu" style="max-width:140px;">
@@ -2610,8 +2653,8 @@
           In this section you could find your QR code that was assigned to you. </div>
       </div>
       <div class="horario_conferencia" style="background-color:#f2fafb">
-        <div  id="bt_scan" class="horario_todo" style="width:60%; background:url(imagenes/flechita2.png) no-repeat; background-position:100%; padding-top:80px; padding-bottom:80px;"> <b style="font-size:28px; color:#003366; font-family:helveticaBold;">Scan Qr Codes</b><br>
-          In this section you can scan other codes. </div>
+        <a onclick="scanear();" href="#scan"><div  id="bt_scan" class="horario_todo" style="width:60%; background:url(imagenes/flechita2.png) no-repeat; background-position:100%; padding-top:80px; padding-bottom:80px;"> <b style="font-size:28px; color:#003366; font-family:helveticaBold;">Scan Qr Codes</b><br>
+          In this section you can scan other codes. </div></a>
       </div>
     </div>
     <div class="menu" style="max-width:140px;">
@@ -2641,7 +2684,7 @@
         <div class="texto_neo fecha_horarios1f">My QR code</div>
         <img class="atr_qr" src="imagenes/atras.png" height="30%" style="position:absolute; left:30%; top:35%"/> </div>
       <div class="myqr">
-        <iframe id="if_qr2" style="position:absolute; width:314px; height:314px; border:none; background-color:#fff; top:50%; left:50%; margin-left:-157px; margin-top:-140px;" scrolling="no" frameborder="0"></iframe>
+        <iframe id="if_qr2" style="position:absolute; width:314px; height:314px; border:none; background-color:#fff; top:50%; left:50%; margin-left:-37px; margin-top:-140px;" scrolling="no" frameborder="0"></iframe>
       </div>
     </div>
     <div class="menu" style="max-width:140px;">
@@ -2670,8 +2713,10 @@
         <div class="texto_carbon titulo_horarios2f">QR CODES</div>
         <div class="texto_neo fecha_horarios2f">Scan codes</div>
         <img class="atr_qr" src="imagenes/atras.png" height="30%" style="position:absolute; left:30%; top:35%"/> </div>
-      <div class="myqr"> <a onclick="scanear();" href="#scan"><img src="imagenes/scan.png" width="250" style="position:absolute; top:50%; margin-top:-125px; left:50%; margin-left:-80px"/></a> </div>
-      <span id="resultado" style="position:absolute; left:30%; top:30%"> #ERROR</span> </div>
+      <div class="myqr">  </div>
+      <span id="resultado" style="position:absolute; left:30%; top:40%; font-size:25px; text-align:left; color: #014c64;" class="texto_neo"><b>Marlon Ruiz</b><br>Phone: <a href="tel:58229774">58229774</a><br>Email: <a href="mailto:marlon_ru@hotmail.com">marlon_ru@hotmail.com</a></span>
+      <a onclick="scanear();" href="#scan"><span style="position:absolute; left:30%; top:61%; font-size:42px; text-align:left; color: #014c64;" class="texto_carbon">Scan Code</span></a>
+      </div>
     <div class="menu" style="max-width:140px;">
       <div class="seleccionado" style="top:60%"></div>
       <div id="botones_menu1" class="botones_menu bt_menu1"></div>
@@ -2706,7 +2751,24 @@
       <div id="com_foto" class="horario_conferencia" style="height:190px; display:none">
         <div class="horario_todo">
           <div class="texto_carbon" style="position:absolute; max-width:250px; margin-left:20px; top:20px; text-align:center; font-size:28px; width:60%; color:#333">SHARE</div>
-          <div style="position:absolute; max-width:250px; margin-left:20px; top:60px; text-align:center; font-size:50px; width:60%; color:#333"> <a href="mailto:?Subject=Welcoming remarks&Body=http://www.wfc-2015.net/"><img src="imagenes/correo.png" width="55" height="55" style="position:absolute; left:0px;"/></a> <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wfc-2015.net/" target="popup" onClick="window.open(this.href, this.target, 'width=400,height=400'); return false;"><img src="imagenes/linkedin.png" width="55" height="55" style="position:absolute; left:50%; margin-left:-27px;"/></a> <a href="http://twitter.com/share?url=http://www.wfc-2015.net/&text=Welcoming remarks&hashtags=wfc2015" target="popup" onClick="window.open(this.href, this.target, 'width=400,height=400'); return false;"><img src="imagenes/twitter.png" width="55" height="55" style="position:absolute; right:0px;"/></a> </div>
+          <div style="position:absolute; max-width:250px; margin-left:20px; top:60px; text-align:center; font-size:50px; width:60%; color:#333"> 
+          
+          <img id="com_correo" src="imagenes/correo.png" width="55" height="55" style="position:absolute; left:0px;"/> 
+          <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.wfc-2015.net/" target="popup" onClick="window.open(this.href, this.target, 'width=400,height=400'); return false;"><img id="com_lin" src="imagenes/linkedin.png" width="55" height="55" style="position:absolute; left:50%; margin-left:-27px;"/></a> 
+          
+          <a href="http://twitter.com/share?url=http://www.wfc-2015.net/&text=Welcoming remarks&hashtags=wfc2015" target="popup" onClick="window.open(this.href, this.target, 'width=400,height=400'); return false;"><img id="com_twi" src="imagenes/twitter.png" width="55" height="55" style="position:absolute; right:0px;"/></a> </div>
+          
+          <script>
+          	$('#com_correo').click(function(){
+ 				window.open("mailto:?Subject=Welcoming remarks&Body=http://www.wfc-2015.net/", "popup1"); 
+ 			})
+			$('#com_lin').click(function(){
+ 				window.open("http://www.linkedin.com/shareArticle?mini=true&url=http://www.wfc-2015.net/", "popup1"); 
+ 			})
+			$('#com_twi').click(function(){
+ 				window.open("http://twitter.com/share?url=http://www.wfc-2015.net/&text=Welcoming remarks&hashtags=wfc2015", "popup1"); 
+ 			})
+          </script>
         </div>
       </div>
     </div>
@@ -4718,30 +4780,15 @@
 		
 
 		var allText = ""
+		var nombre = ""
 
 		function ini_scr(){
-			
-				function readTextFile(file)
-				{
-					var rawFile = new XMLHttpRequest();
-					rawFile.open("GET", file, false);
-					rawFile.onreadystatechange = function ()
-					{
-						if(rawFile.readyState === 4)
-						{
-							if(rawFile.status === 200 || rawFile.status == 0)
-							{
-								allText = rawFile.responseText;
-							}
-						}
-					}
-					rawFile.send(null);
-				}
-			
 
-				pollo=1				
+				pollo=1	
 				
-				readTextFile("archivo.txt");
+				nombre = localStorage.getItem("nombre");
+				
+				allText = "<b>"+localStorage.getItem("nombre")+" "+localStorage.getItem("apellido")+"<b><br>Phone: <a href='tel:"+localStorage.getItem("telefono")+"'>"+localStorage.getItem("telefono")+"</a><br>Mail: <a href='mailto:"+localStorage.getItem("email")+"'>"+localStorage.getItem("email")+"</a>"			
 				
 				$('#screem').stop().animate({opacity: '1'}, 800);
 
@@ -4773,16 +4820,20 @@
 
 				alto_cargando = $( "#cargando" ).height()
 
+
+
 				$('#cargando').css('font-size', alto_cargando+'px')
 
-				
-			
-				
 
 				setTimeout("$('#screen').fadeOut()", 3000)
-				if(allText!=""){
-				setTimeout("window.location.href = '#home'", 3000);	
-				setTimeout("$('#home').fadeIn()", 3000)
+				if (typeof(Storage) != "undefined") {
+					if(document.getElementById("nom3").innerHTML==""){
+						setTimeout("window.location.href = '#login'", 3000);
+						setTimeout("$('#login').fadeIn()", 3000)
+					}else{
+						setTimeout("window.location.href = '#home'", 3000);	
+						setTimeout("$('#home').fadeIn()", 3000)
+					}
 				}else{
 				setTimeout("window.location.href = '#login'", 3000);
 				setTimeout("$('#login').fadeIn()", 3000)
@@ -5546,7 +5597,7 @@
 
 	    });
 
-		$("#bt_scan").click(function(){
+		/*$("#bt_scan").click(function(){
 
 		  window.location.href = '#scan'
 
@@ -5556,7 +5607,7 @@
 
 		  ini_sca()
 
-	    });
+	    });*/
 
 		
 
@@ -9257,7 +9308,7 @@
 		
 
 		
-
+	var direFoto;
 	var pictureSource;   // picture source
 
     var destinationType; // sets the format of returned value
@@ -9282,6 +9333,8 @@
 
       smallImage.src = "data:image/jpeg;base64," + imageData;
 
+	  direFoto = "data:image/jpeg;base64," + imageData;
+	  alert(direFoto)
     }
 
     function onPhotoURISuccess(imageURI) {
@@ -9304,7 +9357,7 @@
 
     function onFail(message) {
 
-      alert('Failed because: ' + message);
+      //alert('Failed because: ' + message);
 
     }
 
